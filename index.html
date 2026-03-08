@@ -15,6 +15,7 @@
       --panel: rgba(255, 255, 255, 0.06);
       --panel-2: rgba(255, 255, 255, 0.08);
       --border: rgba(255, 255, 255, 0.12);
+      --border-soft: rgba(255, 255, 255, 0.08);
       --text: #f7f7fb;
       --muted: #b7bdd0;
       --soft: #8b93a7;
@@ -25,10 +26,16 @@
       --shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
       --max: 1180px;
       --radius: 26px;
+      --nav-height: 84px;
+      --avatar-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20220%20220%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%231e293b%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2750%25%27%20stop-color%3D%27%230f172a%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23111827%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3CradialGradient%20id%3D%27glow%27%20cx%3D%2730%25%27%20cy%3D%2720%25%27%20r%3D%2780%25%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f6d28f%27%20stop-opacity%3D%270.9%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2745%25%27%20stop-color%3D%27%237dd3fc%27%20stop-opacity%3D%270.35%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%230b1020%27%20stop-opacity%3D%270%27/%3E%0A%20%20%20%20%3C/radialGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27ring%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f6d28f%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%237dd3fc%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27220%27%20height%3D%27220%27%20rx%3D%2748%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Crect%20width%3D%27220%27%20height%3D%27220%27%20rx%3D%2748%27%20fill%3D%27url%28%23glow%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27110%27%20cy%3D%2784%27%20r%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.08%29%27/%3E%0A%20%20%3Cpath%20d%3D%27M54%20168c16-33%2041-49%2056-49s40%2016%2056%2049%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.10%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27176%27%20cy%3D%2748%27%20r%3D%2718%27%20fill%3D%27rgba%28246%2C210%2C143%2C0.15%29%27/%3E%0A%20%20%3Cpath%20d%3D%27M42%2044l20%200%200%2020-20%200z%27%20fill%3D%27rgba%28125%2C211%2C252%2C0.12%29%27%20transform%3D%27rotate%2818%2052%2054%29%27/%3E%0A%20%20%3Ctext%20x%3D%27110%27%20y%3D%27199%27%20font-family%3D%27Inter%2C%20Arial%2C%20sans-serif%27%20font-size%3D%2728%27%20fill%3D%27%23f7f7fb%27%20text-anchor%3D%27middle%27%20font-weight%3D%27700%27%20letter-spacing%3D%272%27%3EYOGESH%3C/text%3E%0A%20%20%3Crect%20x%3D%274%27%20y%3D%274%27%20width%3D%27212%27%20height%3D%27212%27%20rx%3D%2744%27%20fill%3D%27none%27%20stroke%3D%27url%28%23ring%29%27%20stroke-opacity%3D%270.45%27%20stroke-width%3D%272%27/%3E%0A%3C/svg%3E");
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 110px;
+    }
+
     body {
       margin: 0;
       font-family: "Inter", system-ui, sans-serif;
@@ -69,6 +76,7 @@
 
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
+    button { font: inherit; }
     .container { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
 
     .nav-wrap {
@@ -76,36 +84,90 @@
       top: 0;
       z-index: 50;
       backdrop-filter: blur(18px);
-      background: linear-gradient(180deg, rgba(7,8,12,0.78), rgba(7,8,12,0.46));
+      background: linear-gradient(180deg, rgba(7,8,12,0.82), rgba(7,8,12,0.55));
       border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .nav-wrap.scrolled {
+      background: linear-gradient(180deg, rgba(7,8,12,0.96), rgba(7,8,12,0.82));
+      border-bottom-color: rgba(255,255,255,0.10);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.28);
     }
 
     nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 74px;
+      min-height: var(--nav-height);
       gap: 20px;
+      position: relative;
     }
 
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
+      min-width: 0;
       font-family: "Space Grotesk", sans-serif;
       font-weight: 700;
       letter-spacing: -0.03em;
     }
 
     .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
+      width: 48px;
+      height: 48px;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.14);
+      background:
+        linear-gradient(135deg, rgba(217, 179, 108, 0.18), rgba(125, 211, 252, 0.18)),
+        rgba(255,255,255,0.04);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.14), 0 10px 30px rgba(0,0,0,0.26);
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, rgba(217, 179, 108, 0.22), rgba(125, 211, 252, 0.18));
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 10px 30px rgba(0,0,0,0.25);
+      flex-shrink: 0;
+    }
+
+    .brand-mark::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: 16px;
+      background:
+        radial-gradient(circle at 30% 25%, rgba(246,210,143,0.28), transparent 36%),
+        radial-gradient(circle at 75% 75%, rgba(125,211,252,0.20), transparent 38%),
+        linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02));
+    }
+
+    .brand-mark span {
+      position: relative;
+      z-index: 1;
+      font-size: 1.02rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .brand-copy {
+      display: grid;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .brand-copy strong {
+      font-size: clamp(1rem, 2vw, 1.18rem);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-copy small {
+      color: var(--soft);
+      font-family: "Inter", system-ui, sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     .nav-links {
@@ -119,13 +181,14 @@
     .nav-links a {
       position: relative;
       transition: color 0.25s ease;
+      padding: 8px 0;
     }
 
     .nav-links a::after {
       content: "";
       position: absolute;
       left: 0;
-      bottom: -8px;
+      bottom: -2px;
       width: 100%;
       height: 2px;
       transform: scaleX(0);
@@ -134,21 +197,69 @@
       background: linear-gradient(90deg, var(--gold), var(--cyan));
     }
 
-    .nav-links a:hover { color: var(--text); }
-    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-links a:hover,
+    .nav-links a:focus-visible { color: var(--text); }
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after { transform: scaleX(1); }
 
-    .nav-cta {
-      padding: 12px 18px;
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-social {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 16px;
       border-radius: 999px;
-      background: linear-gradient(135deg, rgba(217, 179, 108, 0.22), rgba(255,255,255,0.08));
+      background: linear-gradient(135deg, rgba(217, 179, 108, 0.16), rgba(255,255,255,0.07));
       border: 1px solid rgba(255,255,255,0.12);
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
       font-weight: 600;
       color: var(--text);
+      transition: transform 0.25s ease, border-color 0.25s ease;
     }
 
+    .nav-social:hover { transform: translateY(-1px); border-color: rgba(246,210,143,0.3); }
+
+    .nav-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      color: var(--text);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+
+    .nav-toggle span,
+    .nav-toggle span::before,
+    .nav-toggle span::after {
+      content: "";
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      position: relative;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .nav-toggle span::before { position: absolute; top: -6px; }
+    .nav-toggle span::after { position: absolute; top: 6px; }
+
+    .nav-toggle.active span { background: transparent; }
+    .nav-toggle.active span::before { transform: translateY(6px) rotate(45deg); }
+    .nav-toggle.active span::after { transform: translateY(-6px) rotate(-45deg); }
+
     .hero {
-      padding: 82px 0 54px;
+      padding: 76px 0 54px;
       position: relative;
     }
 
@@ -193,6 +304,121 @@
     .hero-main {
       padding: 40px;
       min-height: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-identity {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .avatar-flip {
+      width: 94px;
+      height: 94px;
+      border: 0;
+      padding: 0;
+      border-radius: 28px;
+      background: transparent;
+      cursor: pointer;
+      perspective: 1000px;
+      flex-shrink: 0;
+    }
+
+    .avatar-flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .avatar-flip:hover .avatar-flip-inner,
+    .avatar-flip.flipped .avatar-flip-inner,
+    .avatar-flip:focus-visible .avatar-flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .avatar-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 18px 44px rgba(0,0,0,0.30);
+    }
+
+    .avatar-front {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01)),
+        rgba(255,255,255,0.03);
+    }
+
+    .avatar-front::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: var(--avatar-image);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .avatar-front::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.18), transparent 28%, transparent 72%, rgba(255,255,255,0.04)),
+        radial-gradient(circle at 18% 14%, rgba(255,255,255,0.24), transparent 28%);
+      pointer-events: none;
+    }
+
+    .avatar-back {
+      transform: rotateY(180deg);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(246,210,143,0.24), transparent 32%),
+        radial-gradient(circle at 82% 80%, rgba(125,211,252,0.22), transparent 35%),
+        linear-gradient(160deg, #121826, #0a0f19 75%);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .avatar-back strong {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: -0.05em;
+    }
+
+    .avatar-back small {
+      display: block;
+      color: rgba(247,247,251,0.78);
+      margin-top: 4px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .avatar-hint {
+      display: grid;
+      gap: 6px;
+    }
+
+    .avatar-hint strong {
+      font-size: 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    .avatar-hint span {
+      color: var(--soft);
+      font-size: 0.9rem;
+      line-height: 1.5;
     }
 
     .eyebrow {
@@ -228,7 +454,7 @@
 
     .hero-role {
       margin-top: 12px;
-      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      font-size: clamp(1.12rem, 2vw, 1.4rem);
       color: var(--gold-2);
       font-weight: 700;
       letter-spacing: 0.01em;
@@ -254,10 +480,12 @@
       border-radius: 999px;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
       border: 1px solid rgba(255,255,255,0.14);
       font-weight: 700;
       transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+      min-height: 48px;
     }
 
     .btn:hover { transform: translateY(-2px); }
@@ -612,6 +840,11 @@
       font-size: 0.94rem;
     }
 
+    .footer-line {
+      padding-top: 18px;
+      border-top: 1px solid var(--border-soft);
+    }
+
     .reveal {
       opacity: 0;
       transform: translateY(32px);
@@ -627,23 +860,62 @@
       .hero-grid,
       .about-grid,
       .contact-grid,
-      .skills-layout,
-      .stats-grid,
       .achievements-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
       }
 
-      .skills-layout { grid-template-columns: 1fr 1fr; }
-      .hero-grid { grid-template-columns: 1fr; }
+      .stats-grid,
+      .skills-layout {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
-    @media (max-width: 760px) {
-      .nav-links {
+    @media (max-width: 860px) {
+      :root { --nav-height: 76px; }
+
+      nav {
+        flex-wrap: wrap;
+        padding: 14px 0;
+        row-gap: 14px;
+      }
+
+      .nav-right {
+        margin-left: auto;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .nav-social {
         display: none;
       }
 
+      .nav-links {
+        width: 100%;
+        order: 3;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding: 4px 0 2px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 14px 16px;
+        border-radius: 16px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.08);
+      }
+
+      .nav-links a::after { display: none; }
+
       .hero {
-        padding-top: 42px;
+        padding-top: 36px;
       }
 
       .hero-main,
@@ -658,6 +930,30 @@
         padding: 22px;
       }
 
+      .timeline-top,
+      .section-head {
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .timeline-meta { white-space: normal; }
+    }
+
+    @media (max-width: 760px) {
+      html { scroll-padding-top: 90px; }
+
+      .hero-identity {
+        align-items: flex-start;
+      }
+
+      .avatar-flip {
+        width: 80px;
+        height: 80px;
+        border-radius: 24px;
+      }
+
+      .avatar-face { border-radius: 24px; }
+
       .stats-grid,
       .about-grid,
       .skills-layout,
@@ -666,35 +962,66 @@
         grid-template-columns: 1fr;
       }
 
-      .timeline-top,
-      .section-head {
-        flex-direction: column;
-        align-items: start;
+      .hero-summary,
+      .section-copy,
+      .panel p,
+      .achievement p,
+      .metric p,
+      .contact-card p {
+        font-size: 0.97rem;
       }
 
-      .timeline-meta { white-space: normal; }
-      .hero-summary, .section-copy, .panel p, .achievement p { font-size: 0.97rem; }
+      .hero-cta,
+      .contact-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal,
+      .avatar-flip-inner,
+      .btn,
+      .nav-social,
+      .skill-pill {
+        transition: none !important;
+      }
+      .mouse-glow { display: none; }
     }
   </style>
 </head>
 <body>
   <div class="mouse-glow" aria-hidden="true"></div>
 
-  <div class="nav-wrap">
+  <div class="nav-wrap" id="navWrap">
     <div class="container">
       <nav>
         <a class="brand" href="#top" aria-label="Yogesh Saili home">
-          <span class="brand-mark">YS</span>
-          <span>Yogesh Saili</span>
+          <span class="brand-mark"><span>YS</span></span>
+          <span class="brand-copy">
+            <strong>Yogesh Saili</strong>
+            <small>Tech Lead</small>
+          </span>
         </a>
-        <div class="nav-links">
+
+        <div class="nav-right">
+          <a class="nav-social" href="https://www.linkedin.com/in/yogesh-saili" target="_blank" rel="noopener">LinkedIn</a>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+          </button>
+        </div>
+
+        <div class="nav-links" id="navLinks">
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#achievements">Achievements</a>
           <a href="#contact">Contact</a>
         </div>
-        <a class="nav-cta" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
       </nav>
     </div>
   </div>
@@ -704,6 +1031,24 @@
       <div class="container hero-grid">
         <article class="hero-card reveal">
           <div class="hero-main">
+            <div class="hero-identity">
+              <button class="avatar-flip" id="avatarFlip" aria-label="Flip profile card">
+                <span class="avatar-flip-inner">
+                  <span class="avatar-face avatar-front"></span>
+                  <span class="avatar-face avatar-back">
+                    <span>
+                      <strong>YS</strong>
+                      <small>Tap to flip</small>
+                    </span>
+                  </span>
+                </span>
+              </button>
+              <div class="avatar-hint">
+                <strong>Interactive identity card</strong>
+                <span>Hover on desktop or tap on mobile for the avatar flip effect.</span>
+              </div>
+            </div>
+
             <div class="eyebrow"><span class="dot"></span> Building scalable systems, not just shipping features</div>
             <h1>Yogesh<br/>Saili</h1>
             <div class="hero-role">Tech Lead • Senior Software Engineer • Backend & Platform Specialist</div>
@@ -713,7 +1058,6 @@
             <div class="hero-cta">
               <a class="btn btn-primary" href="mailto:yogesh.saili18@gmail.com">Let's connect</a>
               <a class="btn btn-secondary" href="https://www.linkedin.com/in/yogesh-saili" target="_blank" rel="noopener">LinkedIn</a>
-              <a class="btn btn-secondary" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
             </div>
             <div class="quick-points">
               <div class="chip">Java 17 • Spring Boot • Redis</div>
@@ -1016,15 +1360,45 @@
 
   <footer>
     <div class="container">
-      Crafted for <strong>resume.yogeshsaili.com</strong> • Premium one-page GitHub Pages portfolio • Built with HTML, CSS, and JavaScript.
+      <div class="footer-line">Yogesh Saili • Backend systems, platform engineering, performance, and scale.</div>
     </div>
   </footer>
 
   <script>
     const glow = document.querySelector('.mouse-glow');
     window.addEventListener('pointermove', (e) => {
+      if (!glow) return;
       glow.style.left = `${e.clientX}px`;
       glow.style.top = `${e.clientY}px`;
+    });
+
+    const navWrap = document.getElementById('navWrap');
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    const closeMenu = () => {
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    navToggle?.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('active', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    window.addEventListener('scroll', () => {
+      navWrap.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    const avatarFlip = document.getElementById('avatarFlip');
+    avatarFlip?.addEventListener('click', () => {
+      avatarFlip.classList.toggle('flipped');
     });
 
     const observer = new IntersectionObserver((entries) => {
