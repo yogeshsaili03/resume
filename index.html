@@ -23,17 +23,17 @@
       --gold-2: #f6d28f;
       --cyan: #7dd3fc;
       --violet: #b69cff;
+      --emerald: #79f2c4;
       --shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
       --max: 1180px;
       --radius: 26px;
       --nav-height: 84px;
-      --avatar-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20220%20220%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%231e293b%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2750%25%27%20stop-color%3D%27%230f172a%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23111827%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3CradialGradient%20id%3D%27glow%27%20cx%3D%2730%25%27%20cy%3D%2720%25%27%20r%3D%2780%25%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f6d28f%27%20stop-opacity%3D%270.9%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2745%25%27%20stop-color%3D%27%237dd3fc%27%20stop-opacity%3D%270.35%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%230b1020%27%20stop-opacity%3D%270%27/%3E%0A%20%20%20%20%3C/radialGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27ring%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f6d28f%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%237dd3fc%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27220%27%20height%3D%27220%27%20rx%3D%2748%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Crect%20width%3D%27220%27%20height%3D%27220%27%20rx%3D%2748%27%20fill%3D%27url%28%23glow%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27110%27%20cy%3D%2784%27%20r%3D%2734%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.08%29%27/%3E%0A%20%20%3Cpath%20d%3D%27M54%20168c16-33%2041-49%2056-49s40%2016%2056%2049%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.10%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27176%27%20cy%3D%2748%27%20r%3D%2718%27%20fill%3D%27rgba%28246%2C210%2C143%2C0.15%29%27/%3E%0A%20%20%3Cpath%20d%3D%27M42%2044l20%200%200%2020-20%200z%27%20fill%3D%27rgba%28125%2C211%2C252%2C0.12%29%27%20transform%3D%27rotate%2818%2052%2054%29%27/%3E%0A%20%20%3Ctext%20x%3D%27110%27%20y%3D%27199%27%20font-family%3D%27Inter%2C%20Arial%2C%20sans-serif%27%20font-size%3D%2728%27%20fill%3D%27%23f7f7fb%27%20text-anchor%3D%27middle%27%20font-weight%3D%27700%27%20letter-spacing%3D%272%27%3EYOGESH%3C/text%3E%0A%20%20%3Crect%20x%3D%274%27%20y%3D%274%27%20width%3D%27212%27%20height%3D%27212%27%20rx%3D%2744%27%20fill%3D%27none%27%20stroke%3D%27url%28%23ring%29%27%20stroke-opacity%3D%270.45%27%20stroke-width%3D%272%27/%3E%0A%3C/svg%3E");
     }
 
     * { box-sizing: border-box; }
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 110px;
+      scroll-padding-top: 104px;
     }
 
     body {
@@ -56,22 +56,22 @@
         linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
       background-size: 48px 48px;
-      mask-image: radial-gradient(circle at center, rgba(0,0,0,0.75), transparent 88%);
+      mask-image: radial-gradient(circle at center, rgba(0,0,0,0.78), transparent 88%);
       pointer-events: none;
       z-index: -2;
     }
 
     .mouse-glow {
       position: fixed;
-      width: 380px;
-      height: 380px;
+      width: 360px;
+      height: 360px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(217, 179, 108, 0.13), rgba(125, 211, 252, 0.07), transparent 70%);
+      background: radial-gradient(circle, rgba(217, 179, 108, 0.14), rgba(125, 211, 252, 0.08), transparent 70%);
       pointer-events: none;
       transform: translate(-50%, -50%);
       z-index: -1;
-      filter: blur(8px);
-      opacity: 0.9;
+      filter: blur(10px);
+      opacity: 0.92;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -82,25 +82,24 @@
     .nav-wrap {
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 60;
       backdrop-filter: blur(18px);
-      background: linear-gradient(180deg, rgba(7,8,12,0.82), rgba(7,8,12,0.55));
+      background: linear-gradient(180deg, rgba(7,8,12,0.84), rgba(7,8,12,0.58));
       border-bottom: 1px solid rgba(255,255,255,0.06);
       transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
     .nav-wrap.scrolled {
-      background: linear-gradient(180deg, rgba(7,8,12,0.96), rgba(7,8,12,0.82));
+      background: linear-gradient(180deg, rgba(7,8,12,0.98), rgba(7,8,12,0.82));
       border-bottom-color: rgba(255,255,255,0.10);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.28);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.30);
     }
 
     nav {
+      min-height: var(--nav-height);
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      min-height: var(--nav-height);
-      gap: 20px;
+      gap: 24px;
       position: relative;
     }
 
@@ -112,51 +111,120 @@
       font-family: "Space Grotesk", sans-serif;
       font-weight: 700;
       letter-spacing: -0.03em;
-    }
-
-    .brand-mark {
-      width: 48px;
-      height: 48px;
-      border-radius: 18px;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.14);
-      background:
-        linear-gradient(135deg, rgba(217, 179, 108, 0.18), rgba(125, 211, 252, 0.18)),
-        rgba(255,255,255,0.04);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.14), 0 10px 30px rgba(0,0,0,0.26);
-      display: grid;
-      place-items: center;
       flex-shrink: 0;
     }
 
-    .brand-mark::before {
+    .brand-mark {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      display: block;
+      cursor: pointer;
+      perspective: 1000px;
+      flex-shrink: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .brand-mark-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .brand-mark:hover .brand-mark-inner,
+    .brand-mark.flipped .brand-mark-inner,
+    .brand-mark:focus-visible .brand-mark-inner {
+      transform: rotateY(180deg);
+    }
+
+    .brand-face {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      backface-visibility: hidden;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.14), 0 10px 30px rgba(0,0,0,0.26);
+    }
+
+    .brand-face::before {
       content: "";
       position: absolute;
       inset: 1px;
       border-radius: 16px;
       background:
         radial-gradient(circle at 30% 25%, rgba(246,210,143,0.28), transparent 36%),
-        radial-gradient(circle at 75% 75%, rgba(125,211,252,0.20), transparent 38%),
+        radial-gradient(circle at 75% 75%, rgba(125,211,252,0.18), transparent 38%),
         linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02));
+      pointer-events: none;
     }
 
-    .brand-mark span {
+    .brand-front {
+      background:
+        linear-gradient(135deg, rgba(217, 179, 108, 0.18), rgba(125, 211, 252, 0.18)),
+        rgba(255,255,255,0.04);
+    }
+
+    .brand-front span {
       position: relative;
       z-index: 1;
-      font-size: 1.02rem;
+      font-size: 1.04rem;
       font-weight: 800;
       letter-spacing: -0.04em;
     }
 
+    .brand-back {
+      transform: rotateY(180deg);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(246,210,143,0.22), transparent 34%),
+        radial-gradient(circle at 78% 80%, rgba(125,211,252,0.20), transparent 36%),
+        linear-gradient(145deg, rgba(11,16,30,0.98), rgba(17,24,39,0.96));
+    }
+
+    .brand-back-content {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      place-items: center;
+      gap: 3px;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .brand-back-content strong {
+      font-size: 0.86rem;
+      font-weight: 800;
+      letter-spacing: 0.10em;
+      color: #f7f7fb;
+    }
+
+    .brand-back-content small {
+      font-size: 0.50rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(247,247,251,0.72);
+      font-family: "Inter", system-ui, sans-serif;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
     .brand-copy {
       display: grid;
-      gap: 2px;
+      gap: 3px;
       min-width: 0;
     }
 
     .brand-copy strong {
-      font-size: clamp(1rem, 2vw, 1.18rem);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -165,9 +233,10 @@
     .brand-copy small {
       color: var(--soft);
       font-family: "Inter", system-ui, sans-serif;
-      font-weight: 600;
-      letter-spacing: 0.08em;
+      font-weight: 700;
+      letter-spacing: 0.10em;
       text-transform: uppercase;
+      line-height: 1;
     }
 
     .nav-links {
@@ -176,12 +245,14 @@
       gap: 18px;
       color: var(--muted);
       font-size: 0.96rem;
+      margin-left: auto;
     }
 
     .nav-links a {
       position: relative;
       transition: color 0.25s ease;
       padding: 8px 0;
+      white-space: nowrap;
     }
 
     .nav-links a::after {
@@ -199,6 +270,7 @@
 
     .nav-links a:hover,
     .nav-links a:focus-visible { color: var(--text); }
+
     .nav-links a:hover::after,
     .nav-links a:focus-visible::after { transform: scaleX(1); }
 
@@ -206,13 +278,17 @@
       display: flex;
       align-items: center;
       gap: 14px;
+      margin-left: 8px;
+      flex-shrink: 0;
     }
 
     .nav-social {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
       padding: 11px 16px;
+      min-height: 46px;
       border-radius: 999px;
       background: linear-gradient(135deg, rgba(217, 179, 108, 0.16), rgba(255,255,255,0.07));
       border: 1px solid rgba(255,255,255,0.12);
@@ -253,20 +329,19 @@
 
     .nav-toggle span::before { position: absolute; top: -6px; }
     .nav-toggle span::after { position: absolute; top: 6px; }
-
     .nav-toggle.active span { background: transparent; }
     .nav-toggle.active span::before { transform: translateY(6px) rotate(45deg); }
     .nav-toggle.active span::after { transform: translateY(-6px) rotate(-45deg); }
 
     .hero {
-      padding: 76px 0 54px;
+      padding: 54px 0 40px;
       position: relative;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.3fr 0.9fr;
-      gap: 26px;
+      grid-template-columns: 1.24fr 0.86fr;
+      gap: 22px;
       align-items: stretch;
     }
 
@@ -277,7 +352,8 @@
     .achievement,
     .contact-card,
     .skill-group,
-    .spotlight-card {
+    .spotlight-card,
+    .education-card {
       border: 1px solid var(--border);
       background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
       box-shadow: var(--shadow);
@@ -293,7 +369,8 @@
     .achievement::before,
     .contact-card::before,
     .skill-group::before,
-    .spotlight-card::before {
+    .spotlight-card::before,
+    .education-card::before {
       content: "";
       position: absolute;
       inset: 0;
@@ -302,123 +379,10 @@
     }
 
     .hero-main {
-      padding: 40px;
+      padding: 36px;
       min-height: 100%;
       position: relative;
       z-index: 1;
-    }
-
-    .hero-identity {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      margin-bottom: 24px;
-      flex-wrap: wrap;
-    }
-
-    .avatar-flip {
-      width: 94px;
-      height: 94px;
-      border: 0;
-      padding: 0;
-      border-radius: 28px;
-      background: transparent;
-      cursor: pointer;
-      perspective: 1000px;
-      flex-shrink: 0;
-    }
-
-    .avatar-flip-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transform-style: preserve-3d;
-      transition: transform 0.8s cubic-bezier(.2,.8,.2,1);
-    }
-
-    .avatar-flip:hover .avatar-flip-inner,
-    .avatar-flip.flipped .avatar-flip-inner,
-    .avatar-flip:focus-visible .avatar-flip-inner {
-      transform: rotateY(180deg);
-    }
-
-    .avatar-face {
-      position: absolute;
-      inset: 0;
-      backface-visibility: hidden;
-      border-radius: 28px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.14);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 18px 44px rgba(0,0,0,0.30);
-    }
-
-    .avatar-front {
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01)),
-        rgba(255,255,255,0.03);
-    }
-
-    .avatar-front::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: var(--avatar-image);
-      background-size: cover;
-      background-position: center;
-    }
-
-    .avatar-front::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(145deg, rgba(255,255,255,0.18), transparent 28%, transparent 72%, rgba(255,255,255,0.04)),
-        radial-gradient(circle at 18% 14%, rgba(255,255,255,0.24), transparent 28%);
-      pointer-events: none;
-    }
-
-    .avatar-back {
-      transform: rotateY(180deg);
-      background:
-        radial-gradient(circle at 20% 20%, rgba(246,210,143,0.24), transparent 32%),
-        radial-gradient(circle at 82% 80%, rgba(125,211,252,0.22), transparent 35%),
-        linear-gradient(160deg, #121826, #0a0f19 75%);
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 10px;
-    }
-
-    .avatar-back strong {
-      display: block;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 1.5rem;
-      letter-spacing: -0.05em;
-    }
-
-    .avatar-back small {
-      display: block;
-      color: rgba(247,247,251,0.78);
-      margin-top: 4px;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-    }
-
-    .avatar-hint {
-      display: grid;
-      gap: 6px;
-    }
-
-    .avatar-hint strong {
-      font-size: 1rem;
-      letter-spacing: -0.03em;
-    }
-
-    .avatar-hint span {
-      color: var(--soft);
-      font-size: 0.9rem;
-      line-height: 1.5;
     }
 
     .eyebrow {
@@ -433,7 +397,7 @@
       font-size: 0.9rem;
       font-weight: 600;
       letter-spacing: 0.02em;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
 
     .eyebrow .dot {
@@ -453,15 +417,16 @@
     }
 
     .hero-role {
-      margin-top: 12px;
-      font-size: clamp(1.12rem, 2vw, 1.4rem);
+      margin-top: 14px;
+      font-size: clamp(1.08rem, 2vw, 1.42rem);
       color: var(--gold-2);
       font-weight: 700;
       letter-spacing: 0.01em;
+      max-width: 700px;
     }
 
     .hero-summary {
-      margin: 24px 0 0;
+      margin: 20px 0 0;
       max-width: 760px;
       color: var(--muted);
       font-size: 1.05rem;
@@ -472,7 +437,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-top: 28px;
+      margin-top: 24px;
     }
 
     .btn {
@@ -489,6 +454,7 @@
     }
 
     .btn:hover { transform: translateY(-2px); }
+
     .btn-primary {
       background: linear-gradient(135deg, rgba(217, 179, 108, 0.95), rgba(125, 211, 252, 0.82));
       color: #0a0d12;
@@ -504,7 +470,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 30px;
+      margin-top: 24px;
     }
 
     .chip {
@@ -517,7 +483,6 @@
     }
 
     .hero-side {
-      padding: 28px;
       display: grid;
       gap: 18px;
       align-content: start;
@@ -525,6 +490,7 @@
 
     .spotlight-card {
       padding: 24px;
+      min-height: 188px;
     }
 
     .spotlight-title {
@@ -546,13 +512,11 @@
     .spotlight-copy {
       margin: 12px 0 0;
       color: var(--muted);
-      line-height: 1.7;
+      line-height: 1.72;
       font-size: 0.98rem;
     }
 
-    .strip {
-      padding: 14px 0 0;
-    }
+    .strip { padding: 18px 0 0; }
 
     .stats-grid {
       display: grid;
@@ -591,16 +555,14 @@
       font-size: 0.94rem;
     }
 
-    section {
-      padding: 88px 0 0;
-    }
+    section { padding: 76px 0 0; }
 
     .section-head {
       display: flex;
       justify-content: space-between;
       align-items: end;
       gap: 18px;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     .section-title {
@@ -624,9 +586,7 @@
       gap: 22px;
     }
 
-    .panel {
-      padding: 28px;
-    }
+    .panel { padding: 28px; }
 
     .panel h3 {
       margin: 0 0 16px;
@@ -668,12 +628,10 @@
 
     .timeline {
       display: grid;
-      gap: 20px;
+      gap: 18px;
     }
 
-    .timeline-card {
-      padding: 28px;
-    }
+    .timeline-card { padding: 28px; }
 
     .timeline-top {
       display: flex;
@@ -706,9 +664,96 @@
     }
 
     .timeline-domain {
-      color: #d9ddea;
-      font-weight: 600;
       margin-bottom: 14px;
+    }
+
+    .domain-badge {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 58px;
+      padding: 12px 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.09);
+      overflow: hidden;
+      color: #e9edf8;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+
+    .domain-badge::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(100deg, transparent 0%, rgba(255,255,255,0.08) 48%, transparent 100%);
+      transform: translateX(-130%);
+      animation: domainSweep 6.5s linear infinite;
+    }
+
+    .domain-badge::after {
+      content: "";
+      position: absolute;
+      inset: auto auto 0 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      opacity: 0.45;
+    }
+
+    .domain-icon {
+      position: relative;
+      z-index: 1;
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+      font-size: 1rem;
+    }
+
+    .domain-label {
+      position: relative;
+      z-index: 1;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .domain-badge.beauty .domain-icon {
+      color: var(--gold-2);
+      animation: sparkleFloat 3.4s ease-in-out infinite;
+    }
+
+    .domain-badge.health .domain-icon {
+      color: var(--emerald);
+      animation: pulseLift 2.2s ease-in-out infinite;
+    }
+
+    .domain-badge.finance .domain-icon {
+      color: var(--cyan);
+      animation: financeBlink 3.2s ease-in-out infinite;
+    }
+
+    .domain-badge.aviation .domain-icon {
+      color: var(--cyan);
+      animation: flightDrift 2.8s ease-in-out infinite;
+    }
+
+    .domain-badge.aviation .domain-trail {
+      position: absolute;
+      left: 52px;
+      right: 16px;
+      top: 50%;
+      height: 2px;
+      transform: translateY(-50%);
+      background: linear-gradient(90deg, rgba(125,211,252,0), rgba(125,211,252,0.62), rgba(125,211,252,0));
+      opacity: 0.55;
+      filter: blur(0.4px);
+      animation: runwayGlow 2.8s linear infinite;
     }
 
     .bullet-list {
@@ -722,40 +767,95 @@
 
     .skills-layout {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
+      align-items: stretch;
     }
 
     .skill-group {
       padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-height: 100%;
     }
 
     .skill-group h3 {
-      margin: 0 0 16px;
+      margin: 0;
       font-size: 1.08rem;
       letter-spacing: -0.02em;
     }
 
+    .skill-group p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.72;
+      font-size: 0.95rem;
+    }
+
     .skill-chips {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
       gap: 10px;
     }
 
     .skill-pill {
+      min-height: 44px;
       padding: 10px 12px;
-      border-radius: 999px;
+      border-radius: 16px;
       border: 1px solid rgba(255,255,255,0.10);
       background: rgba(255,255,255,0.045);
       color: #e9edf8;
       font-size: 0.92rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
     }
 
     .skill-pill:hover {
-      transform: translateY(-2px) scale(1.02);
+      transform: translateY(-2px) scale(1.01);
       border-color: rgba(217,179,108,0.35);
       background: rgba(255,255,255,0.075);
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .education-card {
+      padding: 28px;
+      min-height: 100%;
+    }
+
+    .edu-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: var(--soft);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .edu-title {
+      margin: 0 0 10px;
+      font-size: 1.22rem;
+      letter-spacing: -0.03em;
+    }
+
+    .edu-meta {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.78;
     }
 
     .achievements-grid {
@@ -784,13 +884,11 @@
     .contact-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 22px;
+      gap: 20px;
       align-items: stretch;
     }
 
-    .contact-card {
-      padding: 32px;
-    }
+    .contact-card { padding: 32px; }
 
     .contact-card h2,
     .contact-card h3 {
@@ -835,7 +933,7 @@
     }
 
     footer {
-      padding: 28px 0 46px;
+      padding: 30px 0 44px;
       color: var(--soft);
       font-size: 0.94rem;
     }
@@ -856,6 +954,37 @@
       transform: translateY(0);
     }
 
+    @keyframes domainSweep {
+      0% { transform: translateX(-130%); }
+      100% { transform: translateX(130%); }
+    }
+
+    @keyframes flightDrift {
+      0%, 100% { transform: translateX(0) translateY(0); }
+      50% { transform: translateX(5px) translateY(-2px); }
+    }
+
+    @keyframes runwayGlow {
+      0% { opacity: 0.18; transform: translateY(-50%) scaleX(0.92); }
+      50% { opacity: 0.72; transform: translateY(-50%) scaleX(1); }
+      100% { opacity: 0.18; transform: translateY(-50%) scaleX(0.92); }
+    }
+
+    @keyframes pulseLift {
+      0%, 100% { transform: scale(1); box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 0 0 rgba(121,242,196,0); }
+      50% { transform: scale(1.06); box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 0 18px rgba(121,242,196,0.22); }
+    }
+
+    @keyframes sparkleFloat {
+      0%, 100% { transform: rotate(0deg) translateY(0); }
+      50% { transform: rotate(10deg) translateY(-2px); }
+    }
+
+    @keyframes financeBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.72; }
+    }
+
     @media (max-width: 1080px) {
       .hero-grid,
       .about-grid,
@@ -865,13 +994,19 @@
       }
 
       .stats-grid,
-      .skills-layout {
+      .skills-layout,
+      .education-grid {
         grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-side {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
     @media (max-width: 860px) {
       :root { --nav-height: 76px; }
+      html { scroll-padding-top: 92px; }
 
       nav {
         flex-wrap: wrap;
@@ -879,17 +1014,9 @@
         row-gap: 14px;
       }
 
-      .nav-right {
-        margin-left: auto;
-      }
-
-      .nav-toggle {
-        display: inline-flex;
-      }
-
-      .nav-social {
-        display: none;
-      }
+      .brand-copy strong { font-size: 1rem; }
+      .brand-copy small { font-size: 0.72rem; }
+      .brand-mark { width: 50px; height: 50px; }
 
       .nav-links {
         width: 100%;
@@ -899,11 +1026,10 @@
         align-items: stretch;
         gap: 8px;
         padding: 4px 0 2px;
+        margin-left: 0;
       }
 
-      .nav-links.open {
-        display: flex;
-      }
+      .nav-links.open { display: flex; }
 
       .nav-links a {
         padding: 14px 16px;
@@ -913,21 +1039,26 @@
       }
 
       .nav-links a::after { display: none; }
+      .nav-social { display: none; }
+      .nav-toggle { display: inline-flex; }
+      .nav-right { margin-left: auto; }
 
-      .hero {
-        padding-top: 36px;
-      }
+      .hero { padding-top: 30px; }
 
       .hero-main,
-      .hero-side,
       .panel,
       .timeline-card,
       .metric,
       .achievement,
       .contact-card,
       .skill-group,
-      .spotlight-card {
+      .spotlight-card,
+      .education-card {
         padding: 22px;
+      }
+
+      .hero-side {
+        grid-template-columns: 1fr;
       }
 
       .timeline-top,
@@ -940,23 +1071,10 @@
     }
 
     @media (max-width: 760px) {
-      html { scroll-padding-top: 90px; }
-
-      .hero-identity {
-        align-items: flex-start;
-      }
-
-      .avatar-flip {
-        width: 80px;
-        height: 80px;
-        border-radius: 24px;
-      }
-
-      .avatar-face { border-radius: 24px; }
-
       .stats-grid,
       .about-grid,
       .skills-layout,
+      .education-grid,
       .achievements-grid,
       .contact-grid {
         grid-template-columns: 1fr;
@@ -967,7 +1085,9 @@
       .panel p,
       .achievement p,
       .metric p,
-      .contact-card p {
+      .contact-card p,
+      .edu-meta,
+      .skill-group p {
         font-size: 0.97rem;
       }
 
@@ -976,20 +1096,19 @@
         flex-direction: column;
       }
 
-      .btn {
-        width: 100%;
-      }
+      .btn { width: 100%; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       .reveal,
-      .avatar-flip-inner,
+      .brand-mark-inner,
       .btn,
       .nav-social,
-      .skill-pill {
-        transition: none !important;
-      }
+      .skill-pill,
+      .domain-badge::before,
+      .domain-badge.aviation .domain-trail,
+      .domain-icon { transition: none !important; animation: none !important; }
       .mouse-glow { display: none; }
     }
   </style>
@@ -1001,26 +1120,37 @@
     <div class="container">
       <nav>
         <a class="brand" href="#top" aria-label="Yogesh Saili home">
-          <span class="brand-mark"><span>YS</span></span>
+          <span class="brand-mark" id="brandFlip" role="button" tabindex="0" aria-label="Flip brand card">
+            <span class="brand-mark-inner">
+              <span class="brand-face brand-front"><span>YS</span></span>
+              <span class="brand-face brand-back">
+                <span class="brand-back-content">
+                  <strong>JAVA</strong>
+                  <small>Spring • Scale</small>
+                </span>
+              </span>
+            </span>
+          </span>
           <span class="brand-copy">
             <strong>Yogesh Saili</strong>
             <small>Tech Lead</small>
           </span>
         </a>
 
+        <div class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#contact">Contact</a>
+        </div>
+
         <div class="nav-right">
           <a class="nav-social" href="https://www.linkedin.com/in/yogesh-saili" target="_blank" rel="noopener">LinkedIn</a>
           <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
             <span></span>
           </button>
-        </div>
-
-        <div class="nav-links" id="navLinks">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#skills">Skills</a>
-          <a href="#achievements">Achievements</a>
-          <a href="#contact">Contact</a>
         </div>
       </nav>
     </div>
@@ -1031,27 +1161,9 @@
       <div class="container hero-grid">
         <article class="hero-card reveal">
           <div class="hero-main">
-            <div class="hero-identity">
-              <button class="avatar-flip" id="avatarFlip" aria-label="Flip profile card">
-                <span class="avatar-flip-inner">
-                  <span class="avatar-face avatar-front"></span>
-                  <span class="avatar-face avatar-back">
-                    <span>
-                      <strong>YS</strong>
-                      <small>Tap to flip</small>
-                    </span>
-                  </span>
-                </span>
-              </button>
-              <div class="avatar-hint">
-                <strong>Interactive identity card</strong>
-                <span>Hover on desktop or tap on mobile for the avatar flip effect.</span>
-              </div>
-            </div>
-
             <div class="eyebrow"><span class="dot"></span> Building scalable systems, not just shipping features</div>
             <h1>Yogesh<br/>Saili</h1>
-            <div class="hero-role">Tech Lead • Senior Software Engineer • Backend & Platform Specialist</div>
+            <div class="hero-role">Tech Lead • Senior Software Engineer • Backend &amp; Platform Specialist</div>
             <p class="hero-summary">
               Strategic engineering leader with 7+ years of experience building high-traffic consumer platforms, distributed backend systems, and operationally critical service ecosystems. I focus on performance, resilience, observability, and engineering decisions that move both metrics and teams.
             </p>
@@ -1131,13 +1243,13 @@
           <article class="panel reveal">
             <h3>What I bring</h3>
             <p>
-              My work sits at the intersection of architecture, performance engineering, and delivery. I have led critical improvements in caching, memory usage, payload design, async workflows, and system reliability—while working closely with product, operations, and engineering teams to ensure the platform delivers measurable business value.
+              My work sits at the intersection of architecture, performance engineering, and delivery. I have led critical improvements in caching, memory usage, payload design, async workflows, and system reliability while working closely with product, operations, and engineering teams to ensure the platform delivers measurable business value.
             </p>
             <div class="specialties">
               <div class="specialty"><span>Strength</span>Production performance tuning</div>
               <div class="specialty"><span>Strength</span>Scalable backend design</div>
               <div class="specialty"><span>Strength</span>Workflow automation</div>
-              <div class="specialty"><span>Strength</span>Observability & reliability</div>
+              <div class="specialty"><span>Strength</span>Observability &amp; reliability</div>
             </div>
           </article>
           <article class="panel reveal">
@@ -1173,9 +1285,14 @@
               </div>
               <div class="timeline-meta">Nov 2025 - Present • Noida, India</div>
             </div>
-            <div class="timeline-domain">Domain: On-demand Beauty & Wellness</div>
+            <div class="timeline-domain">
+              <div class="domain-badge beauty">
+                <span class="domain-icon">✦</span>
+                <span class="domain-label">On-demand Beauty &amp; Wellness</span>
+              </div>
+            </div>
             <ul class="bullet-list">
-              <li>Reduced "Services" load time from roughly 20 minutes to around 4 seconds by redesigning data hydration and caching strategy with multi-layer cache, key design improvements, and lean payload handling.</li>
+              <li>Reduced Services load time from roughly 20 minutes to around 4 seconds by redesigning data hydration and caching strategy with multi-layer cache, key design improvements, and lean payload handling.</li>
               <li>Resolved recurring heap-full and memory spike incidents by identifying high-retention objects, optimizing object graphs, reducing large allocations, and tuning caching plus serialization behavior.</li>
               <li>Cut payload size and processing overhead via compression and lean DTO mapping, reducing network and CPU cost for large service and metadata responses.</li>
             </ul>
@@ -1189,9 +1306,14 @@
               </div>
               <div class="timeline-meta">May 2022 - Nov 2025 • Chandigarh, India</div>
             </div>
-            <div class="timeline-domain">Domain: Healthcare, Logistics, Workforce Management</div>
+            <div class="timeline-domain">
+              <div class="domain-badge health">
+                <span class="domain-icon">✚</span>
+                <span class="domain-label">Healthcare, Logistics &amp; Workforce Management</span>
+              </div>
+            </div>
             <ul class="bullet-list">
-              <li>Built and scaled a custom Multi-Vehicle Routing (MVRP) platform using ArcGIS and NextBillion APIs, driving around 90% logistics cost savings.</li>
+              <li>Built and scaled a custom Multi-Vehicle Routing platform using ArcGIS and NextBillion APIs, driving around 90% logistics cost savings.</li>
               <li>Enabled 7,000+ monthly home visits with minimal overhead through optimized routing and scheduling.</li>
               <li>Designed and implemented workforce management capabilities to track doctor and nurse practitioner availability across regions.</li>
               <li>Delivered microservices using Java Spring Boot, MySQL, ActiveMQ, REST APIs, and async messaging for scalability and resilience.</li>
@@ -1208,7 +1330,12 @@
               </div>
               <div class="timeline-meta">Aug 2021 - May 2022 • Gurgaon, India</div>
             </div>
-            <div class="timeline-domain">Domain: Finance & Insurance</div>
+            <div class="timeline-domain">
+              <div class="domain-badge finance">
+                <span class="domain-icon">◌</span>
+                <span class="domain-label">Finance &amp; Insurance</span>
+              </div>
+            </div>
             <ul class="bullet-list">
               <li>Supported insurance policy management workflows with application maintenance, bug fixes, and production support.</li>
               <li>Contributed to stable releases and improved operational continuity for business-critical workflows.</li>
@@ -1223,7 +1350,13 @@
               </div>
               <div class="timeline-meta">Jan 2019 - Aug 2021 • Gurgaon, India</div>
             </div>
-            <div class="timeline-domain">Domain: Aviation Systems</div>
+            <div class="timeline-domain">
+              <div class="domain-badge aviation">
+                <span class="domain-icon">✈</span>
+                <span class="domain-label">Aviation Systems</span>
+                <span class="domain-trail" aria-hidden="true"></span>
+              </div>
+            </div>
             <ul class="bullet-list">
               <li>Engineered scalable REST APIs with Spring Boot, Spring Data JPA, MongoDB, Apache Camel, and ActiveMQ.</li>
               <li>Implemented pre-flight planning services and secure datalink telemetry ingestion for Lufthansa's NextGen Flight System.</li>
@@ -1240,12 +1373,13 @@
         <div class="section-head reveal">
           <div>
             <h2 class="section-title">Skills</h2>
-            <p class="section-copy">A practical toolset shaped by real production problems: speed, scale, integration, resilience, and operational visibility.</p>
+            <p class="section-copy">A practical toolset shaped by real production problems: speed, scale, integration, resilience, observability, and delivery excellence.</p>
           </div>
         </div>
         <div class="skills-layout">
           <article class="skill-group reveal">
-            <h3>Backend & Architecture</h3>
+            <h3>Backend &amp; Architecture</h3>
+            <p>Core engineering strengths for designing fast, stable, and production-ready systems.</p>
             <div class="skill-chips">
               <span class="skill-pill">Java</span>
               <span class="skill-pill">Spring Boot</span>
@@ -1255,22 +1389,18 @@
               <span class="skill-pill">REST APIs</span>
               <span class="skill-pill">Microservices</span>
               <span class="skill-pill">Resilience4j</span>
-              <span class="skill-pill">Apache Camel</span>
-              <span class="skill-pill">JMS</span>
-              <span class="skill-pill">ActiveMQ</span>
             </div>
           </article>
 
           <article class="skill-group reveal">
-            <h3>Data, Infra & Ops</h3>
+            <h3>Data, Cloud &amp; Observability</h3>
+            <p>Hands-on with data stores, caching layers, cloud services, and production monitoring stacks.</p>
             <div class="skill-chips">
               <span class="skill-pill">MySQL</span>
               <span class="skill-pill">PostgreSQL</span>
               <span class="skill-pill">MongoDB</span>
               <span class="skill-pill">Redis</span>
               <span class="skill-pill">AWS</span>
-              <span class="skill-pill">CI/CD</span>
-              <span class="skill-pill">Jenkins</span>
               <span class="skill-pill">Prometheus</span>
               <span class="skill-pill">Grafana</span>
               <span class="skill-pill">Datadog</span>
@@ -1278,13 +1408,26 @@
           </article>
 
           <article class="skill-group reveal">
-            <h3>Integrations & Domain Tooling</h3>
+            <h3>Messaging, APIs &amp; Integrations</h3>
+            <p>Built real-world integrations for workflows, logistics, document processing, and enterprise data exchange.</p>
             <div class="skill-chips">
+              <span class="skill-pill">Apache Camel</span>
+              <span class="skill-pill">JMS</span>
+              <span class="skill-pill">ActiveMQ</span>
               <span class="skill-pill">EDI X12 835</span>
               <span class="skill-pill">AWS Textract</span>
               <span class="skill-pill">Google Directions API</span>
               <span class="skill-pill">Route Optimization</span>
               <span class="skill-pill">VRP / MVRP</span>
+            </div>
+          </article>
+
+          <article class="skill-group reveal">
+            <h3>Delivery, Tooling &amp; Collaboration</h3>
+            <p>Execution-focused toolkit for engineering delivery, debugging, release flow, and cross-team collaboration.</p>
+            <div class="skill-chips">
+              <span class="skill-pill">CI/CD</span>
+              <span class="skill-pill">Jenkins</span>
               <span class="skill-pill">Git</span>
               <span class="skill-pill">Bitbucket</span>
               <span class="skill-pill">Jira</span>
@@ -1292,6 +1435,29 @@
               <span class="skill-pill">Postman</span>
               <span class="skill-pill">Swagger</span>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2 class="section-title">Education</h2>
+            <p class="section-copy">Academic foundation in computer science, problem solving, and the science stream that shaped my technical base.</p>
+          </div>
+        </div>
+        <div class="education-grid">
+          <article class="education-card reveal">
+            <div class="edu-label">Graduation</div>
+            <h3 class="edu-title">B.Tech • Computer Science Engineering</h3>
+            <p class="edu-meta">Guru Nanak Dev University, Amritsar<br/>Core foundation in software engineering, data structures, systems thinking, and computer science fundamentals.</p>
+          </article>
+          <article class="education-card reveal">
+            <div class="edu-label">Senior Secondary</div>
+            <h3 class="edu-title">CBSE • Science Stream (PCM / Non-Medical)</h3>
+            <p class="edu-meta">Built a strong analytical base through Physics, Chemistry, and Mathematics, which later translated naturally into engineering and backend problem solving.</p>
           </article>
         </div>
       </div>
@@ -1347,10 +1513,6 @@
                 <span>LinkedIn</span>
                 linkedin.com/in/yogesh-saili
               </a>
-              <div class="contact-item">
-                <span>Education</span>
-                B.Tech, Computer Science Engineering • Guru Nanak Dev University, Amritsar
-              </div>
             </div>
           </article>
         </div>
@@ -1360,7 +1522,7 @@
 
   <footer>
     <div class="container">
-      <div class="footer-line">Yogesh Saili • Backend systems, platform engineering, performance, and scale.</div>
+      <div class="footer-line">Designed &amp; engineered by <strong>Yogesh Saili</strong> • Java, Spring, distributed systems, performance, and production scale.</div>
     </div>
   </footer>
 
@@ -1375,6 +1537,7 @@
     const navWrap = document.getElementById('navWrap');
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
+    const brandFlip = document.getElementById('brandFlip');
 
     const closeMenu = () => {
       navLinks.classList.remove('open');
@@ -1396,10 +1559,20 @@
       navWrap.classList.toggle('scrolled', window.scrollY > 10);
     });
 
-    const avatarFlip = document.getElementById('avatarFlip');
-    avatarFlip?.addEventListener('click', () => {
-      avatarFlip.classList.toggle('flipped');
-    });
+    if (brandFlip) {
+      const toggleBrandFlip = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        brandFlip.classList.toggle('flipped');
+      };
+
+      brandFlip.addEventListener('click', toggleBrandFlip);
+      brandFlip.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          toggleBrandFlip(event);
+        }
+      });
+    }
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -1427,6 +1600,7 @@
           el.textContent = target >= 1000 ? current.toLocaleString() : current;
           if (progress < 1) requestAnimationFrame(tick);
         };
+
         requestAnimationFrame(tick);
       });
     }, { threshold: 0.35 });
