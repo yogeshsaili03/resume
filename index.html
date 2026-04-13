@@ -951,6 +951,12 @@
       font-size: 0.94rem;
     }
 
+    .footer-updated {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
     .footer-line {
       padding-top: 18px;
       border-top: 1px solid var(--border-soft);
@@ -1295,6 +1301,8 @@
             </div>
             <ul class="bullet-list">
               <li>Reduced Services load time from roughly 20 minutes to around 4 seconds by redesigning data hydration and caching strategy with multi-layer cache, key design improvements, and lean payload handling.</li>
+              <li>Led migration of key platform capabilities from monolith architecture to microservices, improving modularity, scalability, and deployment agility.</li>
+              <li>Optimized major login and authentication flows to sub-100ms latency, improving responsiveness for high-traffic user journeys.</li>
               <li>Resolved recurring heap-full and memory spike incidents by identifying high-retention objects, optimizing object graphs, reducing large allocations, and tuning caching plus serialization behavior.</li>
               <li>Cut payload size and processing overhead via compression and lean DTO mapping, reducing network and CPU cost for large service and metadata responses.</li>
             </ul>
@@ -1523,10 +1531,13 @@
   </main>
 
   <footer>
-    <div class="container">
-      <div class="footer-line">Designed &amp; engineered by <strong>Yogesh Saili</strong> • Java, Spring, distributed systems, performance, and production scale.</div>
+  <div class="container">
+    <div class="footer-line">
+      Designed &amp; engineered by <strong>Yogesh Saili</strong> • Java, Spring, distributed systems, performance, and production scale.
+      <div class="footer-updated">Last updated: April 13, 2026</div>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <script>
     const glow = document.querySelector('.mouse-glow');
